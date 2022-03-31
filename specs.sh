@@ -1,12 +1,19 @@
 #!/bin/bash
 
+echo Information on main disk
 df -h /
 
+echo Memory info
 free -h
 
-nproc
+echo Total CPUs:
+echo CPUs: nproc
 
+echo CPU Model
 cat /proc/cpuinfo |grep "model name"
 
+echo Kernel and OS info
 uname -a
+
+cat /etc/os-release
 
