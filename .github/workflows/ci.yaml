@@ -12,11 +12,15 @@ jobs:
 
   specs:
     name: specs
-    runs-on: actuated-aarch64
+    runs-on: actuated
     steps:
       - uses: actions/checkout@v1
 
       - name: Check specs
         run: |
           ./specs.sh
+      - name: pip3 install yq
+        run: |
+          pip3 install yq
+          find / | grep yq
 
