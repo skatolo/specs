@@ -22,5 +22,6 @@ jobs:
       - name: pip3 install yq
         run: |
           pip3 install yq
-          find / | grep yq
-
+          sudo find / | grep yq
+          /home/runner/.local/bin/yq
+          yq
