@@ -16,3 +16,6 @@ echo Kernel and OS info
 uname -a
 
 cat /etc/os-release
+
+echo PATH defined as:
+echo $PATH
