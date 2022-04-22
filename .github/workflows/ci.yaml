@@ -19,11 +19,3 @@ jobs:
       - name: Check specs
         run: |
           ./specs.sh
-      - name: pip3 install yq
-        run: |
-          echo $PATH
-          which yq
-          pip3 install yq
-          sudo find / | grep yq
-          which yq
-          yq
