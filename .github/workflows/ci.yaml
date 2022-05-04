@@ -12,7 +12,7 @@ jobs:
 
   specs:
     name: specs
-    runs-on: actuated-aarch64
+    runs-on: actuated
     steps:
       - uses: actions/checkout@v1
 
