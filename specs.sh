@@ -21,4 +21,3 @@ echo PATH defined as:
 echo $PATH
 
 
-
