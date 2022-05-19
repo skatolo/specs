@@ -9,7 +9,6 @@ on:
       - master
 
 jobs:
-
   specs:
     name: specs
     runs-on: actuated
