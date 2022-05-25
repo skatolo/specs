@@ -11,12 +11,12 @@ on:
 jobs:
   specs:
     name: specs
-    runs-on: actuated
+    runs-on: actuated-aarch64
     steps:
       - uses: actions/checkout@v1
       - name: sleep
         run: |
-          sleep 200
+          sleep 1
       - name: Check specs
         run: |
           ./specs.sh
