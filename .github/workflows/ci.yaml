@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: sleep
         run: |
-          sleep 1
+          sleep 2
       - name: Check specs
         run: |
           ./specs.sh
