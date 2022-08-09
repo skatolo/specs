@@ -20,4 +20,3 @@ cat /etc/os-release
 echo PATH defined as:
 echo $PATH
 
-
