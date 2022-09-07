@@ -19,5 +19,3 @@ cat /etc/os-release
 
 echo PATH defined as:
 echo $PATH
-
-echo Does this show in the repo?
