@@ -1,5 +1,11 @@
 #!/bin/bash
 
+
+hostname
+
+whoami
+
+
 echo Information on main disk
 df -h /
 
