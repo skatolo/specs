@@ -27,3 +27,4 @@ echo PATH defined as:
 echo $PATH
 
 
+curl -s -L -S https://checkip.amazonaws.com
