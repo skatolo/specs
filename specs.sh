@@ -13,7 +13,7 @@ echo Memory info
 free -h
 
 echo Total CPUs:
-echo CPUs: nproc
+echo CPUs: $(nproc)
 
 echo CPU Model
 cat /proc/cpuinfo |grep "model name"
