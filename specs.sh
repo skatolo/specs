@@ -13,11 +13,11 @@ echo lsblk
 
 lsblk
 
-echo Rotational disks? $(cat /sys/block/sda/queue/rotational)
+echo Rotational disks? $(cat /sys/block/vda/queue/rotational)
 
 echo Read speed
 
-sudo hdparm -t /dev/sda
+sudo hdparm -t /dev/vda
 
 echo Write speed
 
