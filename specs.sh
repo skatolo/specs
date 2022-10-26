@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo Where is this runner?
+
+curl -s http://ip-api.com/json|jq
+
 
 hostname
 
@@ -45,7 +49,4 @@ echo $PATH
 
 curl -s -L -S https://checkip.amazonaws.com
 
-echo Where is this runner?
-
-curl -s http://ip-api.com/json|jq
 
