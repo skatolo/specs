@@ -48,3 +48,4 @@ curl -s -L -S https://checkip.amazonaws.com
 echo Where is this runner?
 
 curl -s http://ip-api.com/json|jq
+
