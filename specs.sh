@@ -5,6 +5,13 @@ hostname
 
 whoami
 
+echo read speed
+
+sudo hdparm -t /dev/sda
+
+echo write speed
+
+sync; dd if=/dev/zero of=./tempfile bs=1M count=1024; sync
 
 echo Information on main disk
 df -h /
