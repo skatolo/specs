@@ -9,9 +9,6 @@ hostname
 
 whoami
 
-echo mounts
-
-mount
 
 echo lsblk
 
