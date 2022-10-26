@@ -30,6 +30,6 @@ curl -s -L -S https://checkip.amazonaws.com
 
 echo Internet speed test
 
-arkade system install node
-/usr/local/bin/npm install --global fast-cli
+sudo arkade system install node
+sudo /usr/local/bin/npm install --global fast-cli
 fast -u --single-line
