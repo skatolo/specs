@@ -5,6 +5,14 @@ hostname
 
 whoami
 
+echo mounts
+
+mount
+
+echo lsblk
+
+lsblk
+
 echo Rotational disks? $(cat /sys/block/sda/queue/rotational)
 
 echo Read speed
