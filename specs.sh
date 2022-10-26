@@ -5,11 +5,13 @@ hostname
 
 whoami
 
-echo read speed
+echo Rotational disks? $(cat /sys/block/sda/queue/rotational)
+
+echo Read speed
 
 sudo hdparm -t /dev/sda
 
-echo write speed
+echo Write speed
 
 sync; dd if=/dev/zero of=./tempfile bs=1M count=1024; sync
 
@@ -34,3 +36,7 @@ echo PATH defined as:
 echo $PATH
 
 curl -s -L -S https://checkip.amazonaws.com
+
+echo Where is this runner?
+
+curl -s http://ip-api.com/json|jq

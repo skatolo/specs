@@ -15,9 +15,9 @@ jobs:
     runs-on: actuated-aarch64
     steps:
       - uses: actions/checkout@v1
-      - name: sleep
+      - name: add hdparm
         run: |
-          sleep 2
+          sudo apt update -qqqy && sudo apt install -qqy hdparm
       - name: Check specs
         run: |
           ./specs.sh
