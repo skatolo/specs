@@ -1,6 +1,7 @@
 #!/bin/bash
 
-sleep 60
+echo Sleeping for 5 minutes
+sleep 300
 
 echo Where is this runner?
 
