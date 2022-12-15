@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sleep 60
+
 echo Where is this runner?
 
 curl -s http://ip-api.com/json|jq
