@@ -50,3 +50,9 @@ echo $PATH
 echo Public IP:
 
 curl -s -L -S https://checkip.amazonaws.com
+
+echo Checking speed
+
+npm install --global fast-cli
+
+fast -u
