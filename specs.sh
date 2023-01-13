@@ -53,5 +53,6 @@ curl -s -L -S https://checkip.amazonaws.com
 
 echo Checking speed
 
-sudo npm install --global fast-cli
-fast -u
+sudo pip install speedtest-cli
+
+speedtest-cli
