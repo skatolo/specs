@@ -20,7 +20,7 @@ sudo apt update -qy && sudo apt install -qy hdparm
 
 echo Read speed
 
-sudo hdparm -t /dev/vda
+sudo hdparm -t $(mount |grep "/ "|cut -d " " -f1)
 
 echo Write speed
 
