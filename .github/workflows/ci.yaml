@@ -12,10 +12,13 @@ on:
 jobs:
     specs:
         name: specs
-        runs-on: buildjet-64vcpu-ubuntu-2204
+        runs-on: buildjet-4vcpu-ubuntu-2204
         steps:
         - uses: actions/checkout@v1
         - name: Check specs
           run: |
             ./specs.sh
-
+        - name: Run fast
+          run: |
+            npm i -g fast-cli
+            fast -u
