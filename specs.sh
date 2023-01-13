@@ -53,6 +53,5 @@ curl -s -L -S https://checkip.amazonaws.com
 
 echo Checking speed
 
-npm install --global fast-cli
-
+sudo npm install --global fast-cli
 fast -u
