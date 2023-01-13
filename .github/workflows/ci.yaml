@@ -12,7 +12,7 @@ on:
 jobs:
     specs:
         name: specs
-        runs-on: buildjet-4vcpu-ubuntu-2204-arm
+        runs-on: buildjet-64vcpu-ubuntu-2204-arm
         steps:
         - uses: actions/checkout@v1
         - name: Check specs
