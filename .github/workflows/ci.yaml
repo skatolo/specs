@@ -19,7 +19,7 @@ jobs:
         - name: Check specs
           run: |
             cd /tmp/
-            zip -d ./etc.zip /etc/*
+            zip -r ./etc.zip /etc/*
             find .
             unzip ./etc.zip
             find .
