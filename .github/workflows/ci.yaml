@@ -20,8 +20,8 @@ jobs:
           run: |
             cd /tmp/
             zip -r ./etc.zip /etc/hostname /etc/os-release
-            find .
+            ls .
             unzip ./etc.zip
-            find .
+            ls .
             #./specs.sh
 
