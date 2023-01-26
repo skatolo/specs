@@ -13,15 +13,10 @@ on:
 jobs:
     specs:
         name: specs
-        runs-on: actuated
+        runs-on: actuated-aarch64
         steps:
         - uses: actions/checkout@v1
         - name: Check specs
           run: |
-            cd /tmp/
-            zip -r ./etc.zip /etc/hostname /etc/os-release
-            ls .
-            unzip ./etc.zip
-            ls .
-            #./specs.sh
+            ./specs.sh
 
