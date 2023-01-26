@@ -56,3 +56,4 @@ echo Checking speed
 sudo pip install speedtest-cli
 
 speedtest-cli
+
