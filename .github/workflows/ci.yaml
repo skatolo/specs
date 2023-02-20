@@ -1,4 +1,4 @@
-name: CI
+name: specs-workflow
 
 on:
     pull_request:
