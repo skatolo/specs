@@ -44,6 +44,12 @@ uname -a
 
 cat /etc/os-release
 
+if ! [ -e /dev/kvm ]; then
+    echo "/dev/kvm does not exist"
+else
+    echo "/dev/kvm exists"
+fi
+
 echo PATH defined as:
 echo $PATH
 
