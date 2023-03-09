@@ -57,3 +57,6 @@ sudo pip install speedtest-cli
 
 speedtest-cli
 
+echo Kernel config:
+
+cat /boot/config-$(uname -r)
