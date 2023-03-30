@@ -17,7 +17,7 @@ jobs:
         steps:
         - uses: actions/checkout@v1
         - name: Systemd resolve
-          run: sudo systemd-resolve --status --no-pager
+          run: sudo resolvectl status --no-pager
         - name: Check specs
           run: |
             ./specs.sh
