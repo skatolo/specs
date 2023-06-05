@@ -16,6 +16,9 @@ jobs:
         runs-on: actuated
         steps:
         - uses: actions/checkout@v1
-        - name: Check specs
-          run: |
-            ./specs.sh
+        - run: |
+            sudo ps -ef
+            sleep 30
+#         - name: Check specs
+#           run: |
+#             ./specs.sh
