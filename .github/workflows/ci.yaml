@@ -10,21 +10,12 @@ on:
         - main
     workflow_dispatch:
 
-permissions:
-  id-token: write
-  contents: read
-  actions: read
-
 jobs:
     specs:
         name: specs
         runs-on: actuated
         steps:
         - uses: actions/checkout@v1
-        - run: |
-            sudo ps -ef
-            sleep 30
-        - uses: self-actuated/connect-ssh@master
-#         - name: Check specs
-#           run: |
-#             ./specs.sh
+        - name: Check specs
+          run: |
+            ./specs.sh
