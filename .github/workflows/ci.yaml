@@ -13,7 +13,7 @@ on:
 jobs:
     specs:
         name: specs
-        runs-on: [ actuated-any, kraker ]
+        runs-on: [ actuated-any, nomatch ]
         steps:
         - uses: actions/checkout@v1
         - name: Check specs
