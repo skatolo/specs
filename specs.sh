@@ -1,62 +1,122 @@
 #!/bin/bash
 
-echo Where is this runner?
+# lsblk
 
-curl -s http://ip-api.com/json|jq
+# echo Rotational disks? $(cat /sys/block/vda/queue/rotational)
 
-hostname
+# echo Installing hdparm
 
-whoami
+# sudo apt update -qqqqy && sudo apt install -qqqqy hdparm
 
-echo lsblk
+# echo Read speed
 
-lsblk
+# sudo hdparm -t $(mount |grep "/ "|cut -d " " -f1)
 
-echo Rotational disks? $(cat /sys/block/vda/queue/rotational)
+# echo Write speed
 
-echo Installing hdparm
+# sync;
 
-sudo apt update -qy && sudo apt install -qy hdparm
+sudo dmesg
 
-echo Read speed
+# time dd if=/dev/zero of=./tempfile bs=1M count=1024 conv=fdatasync
 
-sudo hdparm -t $(mount |grep "/ "|cut -d " " -f1)
+# rm ./tempfile
 
-echo Write speed
+# curl -i https://192.168.128.1:5000/v2/_catalog
 
-sync; dd if=/dev/zero of=./tempfile bs=1M count=1024; sync
+# echo $DEBIAN_FRONTEND
 
-echo Information on main disk
+# # /usr/bin/which python3
+# # echo "which python3" $?
 
-df -h /
+# # /usr/bin/which python
+# # echo "which python" $?
 
-echo Memory info
-free -h
+# echo OS:
+# sudo cat /etc/os-release
 
-echo Total CPUs:
-echo CPUs: $(nproc)
+# # df -h /
+# # lsblk
 
-echo CPU Model
-cat /proc/cpuinfo |grep "model name"
+# # echo "Machine ID: $(sudo cat /etc/machine-id)"
+# # echo "DBUS machine ID: $(sudo cat /var/lib/dbus/machine-id)"
 
-echo Kernel and OS info
-uname -a
+# # sudo rm -rf /var/lib/dbus/machine-id
+# # sudo systemd-machine-id-setup
 
-cat /etc/os-release
+# # echo "Machine ID: $(sudo cat /etc/machine-id)"
+# # echo "DBUS machine ID: $(sudo cat /var/lib/dbus/machine-id)"
 
-echo PATH defined as:
-echo $PATH
+# # sudo dbus-uuidgen --ensure=/etc/machine-id
 
-echo Public IP:
+# # echo "Machine ID: $(sudo cat /etc/machine-id)"
+# # echo "DBUS machine ID: $(sudo cat /var/lib/dbus/machine-id)"
 
-curl -s -L -S https://checkip.amazonaws.com
+# # echo What was the start-time of the system image?
 
-echo Checking speed
+sudo systemd-analyze critical-chain
 
-sudo pip install speedtest-cli
+sudo systemd-analyze
 
-speedtest-cli
+sudo systemd-analyze blame
 
-echo Kernel config:
+sudo systemctl list-jobs
 
-cat /boot/config-$(uname -r)
+# # echo Where is this runner?
+
+# # curl -s http://ip-api.com/json|jq
+
+# # echo Hostname: $(hostname)
+
+# # echo Whoami: $(whoami)
+
+# # echo lsblk
+
+# # lsblk
+
+# echo Rotational disks? $(cat /sys/block/vda/queue/rotational)
+
+# echo Installing hdparm
+
+# sudo apt update -qqqy && sudo apt install -qqqy hdparm
+
+# echo Read speed
+
+# sudo hdparm -t $(mount |grep "/ "|cut -d " " -f1)
+
+# echo Write speed
+
+# sync; dd if=/dev/zero of=./tempfile bs=1M count=1024; sync
+
+# # echo Information on main disk
+
+# # df -h /
+
+# # echo Memory info
+# # free -h
+
+# # echo Total CPUs:
+# # echo CPUs: $(nproc)
+
+# # echo CPU Model
+# # cat /proc/cpuinfo |grep "model name"
+
+# # echo Kernel and OS info
+# # uname -a
+
+# # cat /etc/os-release
+
+# # echo PATH defined as:
+# # echo $PATH
+
+# # echo Public IP:
+
+# # curl -s -L -S https://checkip.amazonaws.com
+
+# # #echo Checking speed
+# # # sudo pip install speedtest-cli
+# # # speedtest-cli
+
+# docker pull ubuntu:latest
+
+sudo journalctl -u mount-runner.service
