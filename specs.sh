@@ -1,26 +1,26 @@
 #!/bin/bash
 
-# lsblk
+lsblk
 
-# echo Rotational disks? $(cat /sys/block/vda/queue/rotational)
+echo Rotational disks? $(cat /sys/block/vda/queue/rotational)
 
-# echo Installing hdparm
+echo Installing hdparm
 
-# sudo apt update -qqqqy && sudo apt install -qqqqy hdparm
+sudo apt update -qqqqy && sudo apt install -qqqqy hdparm
 
-# echo Read speed
+echo Read speed
 
-# sudo hdparm -t $(mount |grep "/ "|cut -d " " -f1)
+sudo hdparm -t $(mount |grep "/ "|cut -d " " -f1)
 
-# echo Write speed
+echo Write speed
 
-# sync;
+sync;
 
 sudo dmesg
 
-# time dd if=/dev/zero of=./tempfile bs=1M count=1024 conv=fdatasync
+time dd if=/dev/zero of=./tempfile bs=1M count=1024 conv=fdatasync
 
-# rm ./tempfile
+rm ./tempfile
 
 # curl -i https://192.168.128.1:5000/v2/_catalog
 
@@ -54,13 +54,13 @@ sudo dmesg
 
 # # echo What was the start-time of the system image?
 
-sudo systemd-analyze critical-chain
+# sudo systemd-analyze critical-chain
 
-sudo systemd-analyze
+# sudo systemd-analyze
 
-sudo systemd-analyze blame
+# sudo systemd-analyze blame
 
-sudo systemctl list-jobs
+# sudo systemctl list-jobs
 
 # # echo Where is this runner?
 
@@ -70,27 +70,27 @@ sudo systemctl list-jobs
 
 # # echo Whoami: $(whoami)
 
-# # echo lsblk
+# echo lsblk
 
-# # lsblk
+lsblk
 
-# echo Rotational disks? $(cat /sys/block/vda/queue/rotational)
+echo Rotational disks? $(cat /sys/block/vda/queue/rotational)
 
-# echo Installing hdparm
+echo Installing hdparm
 
-# sudo apt update -qqqy && sudo apt install -qqqy hdparm
+sudo apt update -qqqy && sudo apt install -qqqy hdparm
 
-# echo Read speed
+echo Read speed
 
-# sudo hdparm -t $(mount |grep "/ "|cut -d " " -f1)
+sudo hdparm -t $(mount |grep "/ "|cut -d " " -f1)
 
-# echo Write speed
+echo Write speed
 
-# sync; dd if=/dev/zero of=./tempfile bs=1M count=1024; sync
+sync; dd if=/dev/zero of=./tempfile bs=1M count=1024; sync
 
-# # echo Information on main disk
+# echo Information on main disk
 
-# # df -h /
+df -h /
 
 # # echo Memory info
 # # free -h
@@ -119,4 +119,4 @@ sudo systemctl list-jobs
 
 # docker pull ubuntu:latest
 
-sudo journalctl -u mount-runner.service
+# sudo journalctl -u mount-runner.service
