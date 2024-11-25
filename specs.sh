@@ -16,7 +16,7 @@ echo Write speed
 
 sync;
 
-sudo dmesg
+# sudo dmesg
 
 time dd if=/dev/zero of=./tempfile bs=1M count=1024 conv=fdatasync
 
