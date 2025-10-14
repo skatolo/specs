@@ -13,7 +13,7 @@ on:
 jobs:
     specs:
         name: specs
-        runs-on: ubuntu-24.04-arm
+        runs-on: actuated-4cpu-8gb
         steps:
         - uses: actions/checkout@v1
         - name: Check specs
