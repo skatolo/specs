@@ -13,7 +13,10 @@ on:
 jobs:
     specs:
         name: specs
-        runs-on: actuated-250mcpu-512mb
+        strategy:
+          matrix:
+            counmt: [1, 2, 3, 4, 5]
+        runs-on: actuated-500mcpu-1gb
         steps:
         - uses: actions/checkout@v1
         - name: Check specs
