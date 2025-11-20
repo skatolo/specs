@@ -16,7 +16,7 @@ jobs:
         strategy:
           matrix:
             counmt: [1 ]
-        runs-on: actuated-arm64-1cpu-1gb
+        runs-on: actuated-1cpu-1gb
         steps:
         - uses: actions/checkout@v1
         - name: Check specs
